@@ -1,5 +1,5 @@
 from aqt import main, mw
-from aqt.qt import QAction, QDialog
+from aqt.qt import QAction, QDialog, QTextEdit
 
 from .utils.consts import QT_VER
 from .utils.config import Config
@@ -11,14 +11,17 @@ else:
 
 
 class ReviewPage:
-    def __init__(self, name, textEditHTML, textEditCSS):
+    def __init__(self, name: str, textEditHTML: QTextEdit, textEditCSS: QTextEdit):
         self.name = name
         self.textEditHTML = textEditHTML
         self.textEditCSS = textEditCSS
 
     def load(self, config):
-        self.textEditHTML.setPlainText(config.snacks[self.name].html)
-        self.textEditCSS.setPlainText(config.snacks[self.name].css)
+        res = config.feedback.get(self.name)
+
+        if res:
+            self.textEditHTML.setPlainText(res.html)
+            self.textEditCSS.setPlainText(res.css)
 
 
 class ReviewFeedback:
@@ -30,9 +33,11 @@ class ReviewFeedback:
             "Configure Review Feedback", mw, triggered=self.clicked
         )
 
-        mw.form.menuTools.addSeparator()
+        self.config = None
+        self.elements = None
+
         mw.form.menuTools.addAction(self.menuAction)
-        mw.addonManager.setConfigAction(__name__, self.clicked)
+        # mw.addonManager.setConfigAction(__name__, self.clicked)
 
     def clicked(self) -> None:
         dialog = QDialog(mw)
@@ -51,7 +56,20 @@ class ReviewFeedback:
             ReviewPage("easy", ui.textEditEasyHTML, ui.textEditEasyCSS),
         ]
 
+        # Load content
         for elm in self.elements:
             elm.load(config=self.config)
 
+        ui.buttonBox.accepted.connect(self.save)
         dialog.exec()
+
+    def save(self):
+        if not self.config or not self.elements:
+            return
+
+        for elm in self.elements:
+            self.config.feedback.set(
+                elm.name, elm.textEditHTML.toPlainText(), elm.textEditCSS.toPlainText()
+            )
+
+        self.config.write()

@@ -1,10 +1,1 @@
-{
-    "name": "Review Feedback",
-    "disabled": false,
-    "mod": 0,
-    "conflicts": [],
-    "max_point_version": 0,
-    "min_point_version": 0,
-    "branch_index": 0,
-    "update_enabled": true
-}
+{"name": "Review Feedback", "disabled": false, "mod": 0, "conflicts": [], "max_point_version": 0, "min_point_version": 0, "branch_index": 0, "update_enabled": true, "config": {"all": {"html": "", "css": "h1 { font-family: sans-serif; }"}, "again": {"html": "<h1>Again</h1>", "css": "h1 { color: red; }"}, "hard": {"html": "<h1>Hard</h1>", "css": "h1 { color: white; }"}, "good": {"html": "", "css": "h1 { color: green; }"}, "easy": {"html": "<h1>Easy</h1>", "css": "h1 { color: blue; }"}}}
