@@ -1,27 +1,26 @@
 {
     "all": {
-        "html": "",
-        "css": "h1 { font-family: sans-serif; }"
+        "html": "<div id=\"feedback-container\">...</div>",
+        "css": "#feedback-container {\n    font-weight: bolder !important;\n    font-size: 20px !important;\n    letter-spacing: 0.4ch !important;\n    position: fixed !important;\n    top: 0 !important;\n    left: 0 !important;\n    right: 0 !important;\n    margin: 0 auto !important;\n    text-align: center !important;\n}"
     },
 
     "again": {
-        "html": "<h1>Again</h1>",
-        "css": "h1 { color: red; }"
+        "html": "",
+        "css": "#feedback-container { color: red; }"
     },
 
     "hard": {
-        "html": "<h1>Hard</h1>",
-        "css": "h1 { color: white; }"
+        "html": "",
+        "css": "#feedback-container { color: white; }"
     },
 
     "good": {
-        "html": "<h1>Good</h1>",
-        "css": "h1 { color: green; }"
+        "html": "",
+        "css": "#feedback-container { color: green; }"
     },
 
     "easy": {
-        "html": "<h1>Easy</h1>",
-        "css": "h1 { color: blue; }"
+        "html": "",
+        "css": "#feedback-container { color: blue; }"
     }
 }
-
