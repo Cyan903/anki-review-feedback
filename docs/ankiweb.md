@@ -1,6 +1,7 @@
 Provide feedback after answering a card, similar to AnkiDroid.
 
-<img src="https://raw.githubusercontent.com/Cyan903/anki-review-feedback/refs/heads/main/docs/assets/preview.gif" width="400" />
+<img src="https://raw.githubusercontent.com/Cyan903/anki-review-feedback/refs/heads/main/docs/assets/showcase/partial.gif" width="400" />
+<img src="https://raw.githubusercontent.com/Cyan903/anki-review-feedback/refs/heads/main/docs/assets/showcase/full.gif" width="400" />
 <br /> <br />
 
 See [presets.md](https://github.com/Cyan903/anki-review-feedback/blob/main/docs/presets.md) for alternative presets. The default preset is designed to emulate AnkiDroid's feedback behavior.

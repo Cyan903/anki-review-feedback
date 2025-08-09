@@ -5,7 +5,7 @@
 A customizable [Anki](https://apps.ankiweb.net/) plugin which provide feedback after answering a card, similar to AnkiDroid. See [presets.md](docs/presets.md) for alternative presets. The default preset is designed to emulate AnkiDroid's feedback behavior.
 
 <p align="center">
-    <img src="docs/assets/preview.gif" width="400" />
+    <img src="docs/assets/showcase/partial.gif" width="400" />
     <br />
     <a href="https://ankiweb.net/shared/info/480398359"><i>Plugin URL</i></a>
 </p>
