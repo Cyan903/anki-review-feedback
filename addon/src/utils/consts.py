@@ -1,6 +1,6 @@
 from aqt.qt import QT_VERSION_STR
 
-CURRENT_VERSION = "0.0.0"
+CURRENT_VERSION = "0.1.0"
 
 SOURCE_URL = "https://github.com/Cyan903/anki-review-feedback"
 HELP_URL = f"{SOURCE_URL}/issues"

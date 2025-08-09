@@ -30,7 +30,7 @@ class ReviewerConfig:
         setattr(self, name, ReviewerItem(html, css))
         return True
 
-    def get(self, name: str) -> ReviewerItem | None:
+    def get(self, name: str):
         feedback = getattr(self, name, None)
         return feedback if isinstance(feedback, ReviewerItem) else None
 
@@ -99,7 +99,7 @@ class Config:
 
         return True
 
-    def read(self, name: str) -> str | int | None:
+    def read(self, name: str):
         try:
             return self._config[name]
         except KeyError:
