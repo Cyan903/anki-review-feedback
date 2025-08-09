@@ -28,7 +28,7 @@ run:
 export: clean
 	@cp -r addon export/$(name)
 	@find export -type d -name __pycache__ -exec rm -rf {} +
-	@cd export/$(name) && zip -r ../$(name).zip ./*
+	@cd export/$(name) && zip -r ../$(name).ankiaddon ./*
 
 clean:
 	@find export -mindepth 1 ! -name .gitkeep -exec rm -rf {} +
