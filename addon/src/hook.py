@@ -34,8 +34,8 @@ class Hook:
                 `);
 
                 setTimeout(() => feedback.parentNode.removeChild(feedback), {
-            config.delay
-        });
+                    config.delay
+                });
             }})();
         """
 

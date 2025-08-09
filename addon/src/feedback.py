@@ -64,7 +64,7 @@ class ReviewFeedback:
             )
         )
 
-        ui.pushButtonAdvancedInsert.clicked.connect(
+        ui.pushButtonAdvancedTimer.clicked.connect(
             ReviewFeedback.help(
                 "Duration",
                 "How long you want the feedback item to be visible for in miliseconds.",

@@ -73,10 +73,12 @@ class Config:
             # Validate ID and None
             None in [self.id, self.location, self.delay]
             or len(self.id) <= 1
+
             # Validate delay
             or not isinstance(self.delay, int)
             or self.delay < 5
             or self.delay > 9999
+
             # Validate location
             or self.location not in Config.LOCATION_ITEMS
         ):
