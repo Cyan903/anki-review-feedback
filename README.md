@@ -11,7 +11,7 @@ A customizable [Anki](https://apps.ankiweb.net/) plugin which provide feedback a
 </p>
 
 
-# Install
+## Install
 
 Use the following code to install the plugin (**Tools -> Add-ons -> Get Add-ons**):
 
@@ -21,7 +21,7 @@ Use the following code to install the plugin (**Tools -> Add-ons -> Get Add-ons*
 
 Once installed, restart Anki.
 
-# Usage
+## Usage
 
 Access the menu from **Tools -> Configure Review Feedback** or directly edit the JSON in **Tools -> Add-ons -> Review Feedback -> Config**.
 
@@ -32,15 +32,15 @@ Access the menu from **Tools -> Configure Review Feedback** or directly edit the
 
 </div>
 
-The first five pages define the HTML and CSS injected when a review is passed. The all tab is included with every review. The advanced tab can be used to configure the injection ID, duration, and location of the HTML.
+The first five pages define the HTML and CSS injected when a review is passed. Content in the "all" tab is included with every review. The "advanced" tab can be used to configure the injection ID, duration, and location of the HTML.
 
-# Development
+## Development
 
 Using `uv` and `Makefile`:
 
 ```sh
 # Building
-make build # Build the Qt designer
+make build # Build the Qt designer files
 make prune # Prune the built designer files
 
 # Developing
