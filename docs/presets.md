@@ -6,6 +6,8 @@ Various presets you can copy and paste. It is recommended to use `!important` to
 
 ![full](assets/showcase/full.gif)
 
+Use `beforeend` as the insert location.
+
 ```html
 <!-- Again -->
 <div id="feedback-container">Again</div>
@@ -44,6 +46,8 @@ Various presets you can copy and paste. It is recommended to use `!important` to
 ## Partial
 
 ![partial](assets/showcase/partial.gif)
+
+Use `afterbegin` as the insert location.
 
 ```html
 <!-- All -->
