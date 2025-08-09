@@ -1,7 +1,7 @@
 from aqt import main, mw
 from aqt.qt import QAction, QDialog, QTextEdit, QMessageBox
 
-from .utils.consts import CURRENT_VERSION, ANKI_URL, DOCS_URL, SOURCE_URL, QT_VER
+from .utils.consts import CURRENT_VERSION, HELP_URL, PRESETS_URL, SOURCE_URL, QT_VER
 from .utils.config import Config
 
 if QT_VER == 6:
@@ -76,8 +76,8 @@ class ReviewFeedback:
             f"<a href='{SOURCE_URL}'>Source Code ({CURRENT_VERSION})</a>"
         )
 
-        ui.labelAdvancedLinksPresets.setText(f"<a href='{DOCS_URL}'>Presets</a>")
-        ui.labelAdvancedLinksHelp.setText(f"<a href='{ANKI_URL}'>Help</a>")
+        ui.labelAdvancedLinksPresets.setText(f"<a href='{PRESETS_URL}'>Presets</a>")
+        ui.labelAdvancedLinksHelp.setText(f"<a href='{HELP_URL}'>Help</a>")
 
         # Setup config
         self.config = Config()

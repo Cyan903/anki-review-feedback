@@ -12,3 +12,7 @@ wheels/
 # Tooling
 .mypy_cache
 
+# Export
+/export/*
+!/export/.gitkeep
+

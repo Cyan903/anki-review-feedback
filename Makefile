@@ -1,8 +1,7 @@
-.PHONY: lint stop start log
+.PHONY: prune lint run export clean
 
-# res/*.ui
+name := review-feedback
 ui := config
-logs := /tmp/anki-plugin-debug.log
 
 Qt5 := $(foreach file,$(ui),addon/res/Qt5/$(file).py)
 Qt6 := $(foreach file,$(ui),addon/res/Qt6/$(file).py)
@@ -16,19 +15,20 @@ addon/res/Qt6/%.py: addon/res/%.ui
 # Rules
 build: $(Qt5) $(Qt6)
 
-clean:
+prune:
 	@rm -rf ./addon/res/Qt5/*.py
 	@rm -rf ./addon/res/Qt6/*.py
 
 lint:
 	@mypy ./addon/src
 
-stop:
-	@pgrep -f anki > /dev/null && kill $(shell pgrep -f anki) 2> /dev/null || echo "Not running"
+run:
+	@anki
 
-start: stop
-	@nohup ./.venv/bin/anki > $(logs) 2>&1 &
+export: clean
+	@cp -r addon export/$(name)
+	@find export -type d -name __pycache__ -exec rm -rf {} +
+	@cd export/$(name) && zip -r ../$(name).zip ./*
 
-log:
-	@tail -n +1 -f $(logs)
-
+clean:
+	@find export -mindepth 1 ! -name .gitkeep -exec rm -rf {} +
