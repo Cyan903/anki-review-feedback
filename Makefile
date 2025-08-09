@@ -21,7 +21,7 @@ clean:
 	@rm -rf ./addon/res/Qt6/*.py
 
 lint:
-	@mypy src
+	@mypy ./addon/src
 
 stop:
 	@pgrep -f anki > /dev/null && kill $(shell pgrep -f anki) 2> /dev/null || echo "Not running"

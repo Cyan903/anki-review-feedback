@@ -1,26 +1,31 @@
 {
-    "all": {
-        "html": "<div id=\"feedback-container\">...</div>",
-        "css": "#feedback-container {\n    font-weight: bolder !important;\n    font-size: 20px !important;\n    letter-spacing: 0.4ch !important;\n    position: fixed !important;\n    top: 0 !important;\n    left: 0 !important;\n    right: 0 !important;\n    margin: 0 auto !important;\n    text-align: center !important;\n}"
-    },
+    "id": "review-feedback-container",
+    "location": "afterbegin",
+    "delay": 1000,
+    "reviewer": {
+        "all": {
+            "html": "<div id=\"feedback-container\">...</div>",
+            "css": "#feedback-container {\n    font-weight: bolder !important;\n    font-size: 20px !important;\n    letter-spacing: 0.4ch !important;\n    position: fixed !important;\n    top: 0 !important;\n    left: 0 !important;\n    right: 0 !important;\n    margin: 0 auto !important;\n    text-align: center !important;\n}"
+        },
 
-    "again": {
-        "html": "",
-        "css": "#feedback-container { color: red; }"
-    },
+        "again": {
+            "html": "",
+            "css": "#feedback-container { color: red; }"
+        },
 
-    "hard": {
-        "html": "",
-        "css": "#feedback-container { color: white; }"
-    },
+        "hard": {
+            "html": "",
+            "css": "#feedback-container { color: white; }"
+        },
 
-    "good": {
-        "html": "",
-        "css": "#feedback-container { color: green; }"
-    },
+        "good": {
+            "html": "",
+            "css": "#feedback-container { color: green; }"
+        },
 
-    "easy": {
-        "html": "",
-        "css": "#feedback-container { color: blue; }"
+        "easy": {
+            "html": "",
+            "css": "#feedback-container { color: blue; }"
+        }
     }
 }

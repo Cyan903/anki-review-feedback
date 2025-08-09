@@ -11,3 +11,4 @@ if __name__ != "__main__":
         mw.hook = hook.Hook(mw)
 else:
     print("This is an anki plugin.")
+    print("See: https://apps.ankiweb.net/")
